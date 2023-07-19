@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+  - ../../base
+images:
+  - name: bretfisher/wordsmith-api
+    newName: ghcr.io/peanut-butter-jellly/wordsmith-api
+    newTag: stable-20230719-c376be7
+  - name: bretfisher/wordsmith-web
+    newName: ghcr.io/peanut-butter-jellly/wordsmith-web
+    newTag: stable-20230719-0717266
+configMapGenerator:
+  - name: db-schema
+    files:
+      - words.sql
