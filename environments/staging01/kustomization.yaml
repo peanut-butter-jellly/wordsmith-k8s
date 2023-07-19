@@ -6,10 +6,10 @@ bases:
 images:
   - name: bretfisher/wordsmith-api
     newName: ghcr.io/peanut-butter-jellly/wordsmith-api
-    newTag: stable-20230714-8c4782f
+    newTag: stable-20230719-c376be7
   - name: bretfisher/wordsmith-web
     newName: ghcr.io/peanut-butter-jellly/wordsmith-web
-    newTag: stable-20230714-6948e91
+    newTag: stable-20230719-0717266
 configMapGenerator:
   - name: db-schema
     files:
